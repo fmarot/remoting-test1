@@ -4,7 +4,7 @@
 
 	<parent>
 		<groupId>com.teamtter.tests.remoting</groupId>
-		<artifactId>images</artifactId>
+		<artifactId>remoting-test1</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 

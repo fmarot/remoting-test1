@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.teamtter.tests.remoting</groupId>
-	<artifactId>images</artifactId>
+	<artifactId>remoting-test1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -12,20 +12,43 @@
 		<module>images-server</module>
 	</modules>
 
-
 	<properties>
-		<!-- Version des dependances -->
-		<!-- <jersey.version>1.10</jersey.version> -->
-		<!-- <jackson.version>1.9.2</jackson.version> -->
 		<spring.version>3.2.2.RELEASE</spring.version>
 		<logback.version>1.0.13</logback.version>
 		<slf4j.version>1.7.5</slf4j.version>
 		<junit.version>4.8</junit.version>
-		<!-- <dozer.version>5.3.2</dozer.version> -->
 		<lombok.version>0.11.8</lombok.version>
 	</properties>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<configuration>
+						<wtpapplicationxml>true</wtpapplicationxml>
+						<wtpversion>2.0</wtpversion>
+						<downloadSources>false</downloadSources>
+						<downloadJavadocs>true</downloadJavadocs>
+					</configuration>
+				</plugin>
 
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<inherited>true</inherited>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	
 	<dependencyManagement>
+
 		<dependencies>
 			<!-- ******** -->
 			<!-- Internal -->
@@ -118,14 +141,6 @@
 	</dependencyManagement>
 
 
-	<dependencies>
-		<dependency>
-			<groupId>com.teamtter.tests.remoting</groupId>
-			<artifactId>images-common</artifactId>
-			<version>${project.version}</version>
-
-		</dependency>
-	</dependencies>
 
 
 </project>

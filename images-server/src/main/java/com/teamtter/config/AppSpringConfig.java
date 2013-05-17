@@ -13,9 +13,7 @@ import com.teamtter.service.ImageService;
 import com.teamtter.services.IImageService;
 
 @Configuration
-public class AppConfig {
-
-	private static final int PORT = 8090;
+public class AppSpringConfig {
 
 	@Bean
 	public ImageService imageService() {
@@ -30,15 +28,13 @@ public class AppConfig {
 		return exporter;
 	}
 
-	public static final String DEFAULT_CONTEXT_ROOT = "/remoting/";
-
 	@Bean
-	public SimpleHttpServerFactoryBean httpServerFactoryBean() {
+	public SimpleHttpServerFactoryBean serverFactory() {
 		Map<String, HttpHandler> contexts = new HashMap<String, HttpHandler>();
-		contexts.put(DEFAULT_CONTEXT_ROOT + IImageService.class.getName(), serviceExporter());
+		contexts.put(IImageService.DEFAULT_CONTEXT_ROOT, serviceExporter());
 		SimpleHttpServerFactoryBean serverFactory = new SimpleHttpServerFactoryBean();
 		serverFactory.setContexts(contexts);
-		serverFactory.setPort(PORT);
+		serverFactory.setPort(IImageService.SERVICE_PORT);
 		return serverFactory;
 	}
 }

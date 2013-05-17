@@ -28,9 +28,11 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-eclipse-plugin</artifactId>
 					<configuration>
+						<!--
 						<wtpapplicationxml>true</wtpapplicationxml>
 						<wtpversion>2.0</wtpversion>
-						<downloadSources>false</downloadSources>
+						-->
+						<downloadSources>true</downloadSources>
 						<downloadJavadocs>true</downloadJavadocs>
 					</configuration>
 				</plugin>
@@ -40,8 +42,8 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<inherited>true</inherited>
 					<configuration>
-						<source>1.7</source>
-						<target>1.7</target>
+						<source>1.6</source>
+						<target>1.6</target>
 					</configuration>
 				</plugin>
 			</plugins>

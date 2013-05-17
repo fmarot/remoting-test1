@@ -7,6 +7,7 @@ import org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean;
 import com.teamtter.data.ImageServiceMetaData;
 import com.teamtter.services.IImageService;
 
+/** Spring's config but in Java instead of XML :) */
 @Configuration
 public class AppSpringConfig {
 

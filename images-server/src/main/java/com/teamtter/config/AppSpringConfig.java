@@ -12,6 +12,7 @@ import com.sun.net.httpserver.HttpHandler;
 import com.teamtter.service.ImageService;
 import com.teamtter.services.IImageService;
 
+/** Spring's config but in Java instead of XML :) */
 @Configuration
 public class AppSpringConfig {
 
